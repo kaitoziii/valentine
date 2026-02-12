@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy Valentine's Day</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400;700&family=Outfit:wght@300;400;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div id="app-container">
+        <!-- Section 1: Gallery (Polaroid Grid) -->
+        <section id="gallery" class="section active">
+            <h1 class="title">Our Memories :3 📸</h1>
+            <div class="polaroid-gallery">
+                <div class="polaroid">
+                    <img src="assets/images/photo1.jpg" alt="Memory 1">
+                </div>
+                <div class="polaroid">
+                    <img src="assets/images/photo2.jpg" alt="Memory 2">
+                </div>
+                <div class="polaroid">
+                    <img src="assets/images/photo3.jpg" alt="Memory 3">
+                </div>
+                <div class="polaroid">
+                    <img src="assets/images/photo4.jpg" alt="Memory 4">
+                </div>
+                <div class="polaroid">
+                    <img src="assets/images/photo5.jpg" alt="Memory 5">
+                </div>
+                <div class="polaroid">
+                    <img src="assets/images/photo6.jpg" alt="Memory 6">
+                </div>
+            </div>
+            <button class="btn next-btn" onclick="nextSection('music')">Next ❤️</button>
+        </section>
+
+        <!-- Section 2: Music & Message -->
+        <section id="music" class="section">
+            <div class="music-content">
+                <div id="youtube-player"></div> <!-- YouTube Player Container -->
+                <div class="lyrics-container">
+                    <p id="typing-text"></p>
+                </div>
+            </div>
+            <button class="btn next-btn" onclick="nextSection('question')">Next 💌</button>
+        </section>
+
+        <!-- Section 3: Question (The "Trick") -->
+        <section id="question" class="section">
+            <div class="question-box">
+                <h2>I wrote a letter for you... 📝</h2>
+                <p>Do you wanna open it?</p>
+                <div class="buttons">
+                    <button id="yes-btn" class="btn" onclick="nextSection('letter')">Yes</button>
+                    <button id="no-btn" class="btn secondary">No</button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Section 4: Final Letter -->
+        <section id="letter" class="section">
+            <div class="letter-content">
+                <h1 class="pookie-header">Happy Valentine's Day Pookie 🐻💕</h1>
+                <div class="letter-body">
+                    <p>Dear Jamjam,</p>
+                    <p>
+                        Valentine’s Day is the perfect day to share our dreams and expectations.
+                        I dream about the future with you, full of laughter, jokes, and happiness.
+                        I know that we are now virtual but I pray that we will meet soon.
+                        With you, every dream becomes possible.
+                    </p>
+                    <p>
+                        Let’s go together on this journey, pursue a dream together.
+                    </p>
+                    <p class="sign">With love,<br>Your Sweetheart</p>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Background Effects -->
+    <div class="background-effects">
+        <div class="hearts-container"></div>
+    </div>
+
+    <script src="https://www.youtube.com/iframe_api"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
