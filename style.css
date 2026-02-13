@@ -208,7 +208,7 @@ body {
     gap: 20px;
 }
 
-#youtube-player {
+#video-player {
     border-radius: 15px;
     overflow: hidden;
     box-shadow: var(--shadow);
@@ -500,7 +500,7 @@ body {
         max-width: 90%;
     }
 
-    #youtube-player {
+    #video-player {
         height: 250px;
     }
 }
@@ -537,7 +537,7 @@ body {
     }
 
     /* Music Section adjustments */
-    #youtube-player {
+    #video-player {
         height: 200px;
     }
 

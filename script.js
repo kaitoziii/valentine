@@ -35,8 +35,8 @@ document.addEventListener('DOMContentLoaded', () => {
             // Special actions when entering sections
             if (id === 'music') {
                 // Try to play music if player is ready
-                if (player && typeof player.playVideo === 'function') {
-                    player.playVideo();
+                if (videoPlayer) {
+                    videoPlayer.play().catch(e => console.log("Autoplay prevented:", e));
                 }
             }
         }
@@ -46,37 +46,17 @@ document.addEventListener('DOMContentLoaded', () => {
     // (Removed for Polaroid Grid Layout)
 
 
-    // --- 4. YouTube Player ---
-    var player;
-    window.onYouTubeIframeAPIReady = function () {
-        player = new YT.Player('youtube-player', {
-            height: '100%',
-            width: '100%',
-            videoId: 'Rj3hEAOyZqQ',
-            playerVars: {
-                'autoplay': 0,
-                'controls': 1,
-                'rel': 0,
-                'showinfo': 0,
-                'loop': 1,
-                'playlist': 'Rj3hEAOyZqQ'
-            },
-            events: {
-                'onReady': onPlayerReady,
-                'onStateChange': onPlayerStateChange
-            }
-        });
-    };
+    // --- 4. Local Video Player ---
+    const videoPlayer = document.getElementById('video-player');
 
-    function onPlayerReady(event) {
-        // Player ready
-    }
+    if (videoPlayer) {
+        // Ensure volume is reasonable (optional)
+        videoPlayer.volume = 0.5;
 
-    function onPlayerStateChange(event) {
-        // If playing (state=1)
-        if (event.data == YT.PlayerState.PLAYING) {
+        // Listen for play event specifically to start typing if not already started
+        videoPlayer.addEventListener('play', () => {
             startTyping();
-        }
+        });
     }
 
     // --- 5. Lyrics / Message Typing ---
