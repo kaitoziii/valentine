@@ -70,7 +70,7 @@ body {
 
 /* Titles */
 .title {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     font-size: 3rem;
     color: var(--primary-color);
     margin-bottom: 20px;
@@ -156,7 +156,7 @@ body {
 
 .polaroid-caption {
     margin-top: 10px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     color: #555;
     font-size: 1rem;
 }
@@ -233,7 +233,7 @@ body {
 #typing-text {
     font-size: 1.3rem;
     /* Larger font */
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     color: var(--text-color);
 }
 
@@ -251,7 +251,7 @@ body {
 .question-box h2 {
     color: var(--primary-color);
     margin-bottom: 20px;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     font-size: 2.5rem;
 }
 
@@ -307,7 +307,7 @@ body {
 }
 
 .pookie-header {
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     color: var(--primary-color);
     text-align: center;
     font-size: 2.5rem;
@@ -322,7 +322,7 @@ body {
 
 .letter-body {
     font-size: 1.3rem;
-    font-family: 'Dancing Script', cursive;
+    font-family: 'Outfit', sans-serif;
     /* Handwritten feel */
     color: #333;
     padding: 10px;
